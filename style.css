@@ -10,8 +10,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #532513;
-    padding: 100px;
+    min-height: 100vh;
+    background: rgb(156, 99, 77);
 }
 
 .all{
@@ -19,27 +19,31 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid #af8d80;
+    border: 2px solid #1d1102;
+    background: rgba(202, 179, 170, 0.5);
     border-radius: 25px;
-    padding: 50px 0;
+    padding: 30px 0;
+    margin-top: 80px auto;
     box-shadow: 10px 10px #290d02;
 }
 
 img{
-    border-radius: 100%;
-    width: 350px;
-    height: auto;
-    box-shadow: 0px 20px 20px 20px #290d02;
-    border: solid 1px #af8d80;
-
+    border-radius: 15px;
+    width: 275px;
+    height: 180px;
+    box-shadow: 0px 10px  20px #290d02;
+    border: solid 3px #af8d80;
+    border-radius: 150px;
+    transform: scale(1.1);
 }
+
 
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     color:#C42C08;
     padding: 35px 0;
-    text-shadow:0 10px 10px #290d02;
+    text-shadow:0 5px 5px #290d02;
     -webkit-text-stroke-width: 1.1px;
     -webkit-text-stroke-color: #461805;
 }
@@ -49,8 +53,8 @@ input{
     margin: 0 20px;
     border-radius: 10px;
     outline: none;
-    border: solid black;
-    background-color: #af8d80;
+    border: 2px solid black;
+    background-color: #c9b5ad;
     box-shadow: 0 10px 10px #290d02;
 }
 
@@ -80,6 +84,27 @@ button:hover{
 button:active{
     background:#972005;
     transform: scale(1.02);
+}
+
+#result{
+    padding: 5px 80px;
+    margin-bottom: -15px;
+    border: 2px solid rgb(219, 174, 174);
+    background-color: #a13a11;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+    align-items: center;
+}
+
+#message{
+    padding:0 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #422f2f;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #866153; 
 }
 
 @media screen and (max-width: 700px){

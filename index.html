@@ -9,20 +9,24 @@
 <body>
     <div class="all">
         <img src="./assets/lisa-simpson-sorteio.gif">
-
+        
             <div>
                 <h1>Sortear um Número</h1>
             </div>
 
             <div>
-                <input placeholder="entre" type="number">
-                <input placeholder="e" type="number">
+                <input placeholder="entre" type="number" id="nbMin">
+                <input placeholder="e" type="number" id="nbMax">
             </div>
 
             <div>
-                <button class="btn">Sortear</button>
+                <button id="btn" onclick="generateNumber()">Sortear</button>
             </div>
+
+            <p id="message"></p>
+
+            <div id="result">0</div>
     </div>
 </body>
-
+<script src="scripts.js"></script>
 </html>
