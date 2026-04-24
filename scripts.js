@@ -34,4 +34,5 @@ function generateNumber(){
     message.style.display = "none"
 
     document.getElementById('btn').innerText = "Refazer Sorteio"
+    
 }
