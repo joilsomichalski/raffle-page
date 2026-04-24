@@ -1,23 +1,37 @@
- function generateNumber(){
+function generateNumber(){
 
-    const min = Math.ceil(document.getElementById('nbMin').value)
-    const max = Math.floor(document.getElementById('nbMax').value)
-
+    const nbMin = document.getElementById('nbMin')
+    const nbMax = document.getElementById('nbMax')
     const message = document.getElementById('message')
+    const errorSound = document.querySelector('.soundError')
+    const resultSound = document.querySelector('.soundResult')
 
-if (document.getElementById('nbMin').value == "" || document.getElementById('nbMax').value == "") {
-    message.innerHTML = "Preencha os dois números antes de sortear!"
-    return
-}    
+    if (nbMin.value == "" || nbMax.value == "") {
+        message.innerHTML = "Preencha os dois números antes de sortear!"
+        message.style.display = "block"
 
-    const result = Math.floor(Math.random() * (max - min + 1)) + min;
+        errorSound.currentTime = 0
+        errorSound.play()
+
+        return
+    }
+
+    const min = Math.ceil(nbMin.value)
+    const max = Math.floor(nbMax.value)
+
+    const result = Math.floor(Math.random() * (max - min + 1)) + min
     const resultScreen = document.getElementById('result')
 
     resultScreen.innerHTML = result
     resultScreen.style.display = "block"
 
-document.getElementById('nbMin').value = ""
-document.getElementById('nbMax').value = ""
+    resultSound.currentTime = 0
+    resultSound.play()
 
-   document.getElementById('btn').innerText = "Refazer Sorteio"
- }
+    nbMin.value = ""
+    nbMax.value = ""
+
+    message.style.display = "none"
+
+    document.getElementById('btn').innerText = "Refazer Sorteio"
+}

@@ -31,6 +31,7 @@ img{
     border-radius: 15px;
     width: 275px;
     height: 180px;
+    margin-top: 40px;
     box-shadow: 0px 10px  20px #290d02;
     border: solid 3px #af8d80;
     border-radius: 150px;
@@ -109,16 +110,25 @@ button:active{
 
 @media screen and (max-width: 700px){
     
+    body{
+        height: 100vh;
+    }
+
     .all{
         width: 80vw;
     }
 
     img{
      width:200px;
+     height: 125px;
+    }
+
+    h1{
+        font-size: 25px;
     }
 
     input{
-        max-width: 125px;
+        max-width: 120px;
         padding: 10px 5px;
         margin: 0 5px;
         border-radius: 10px;
@@ -128,6 +138,11 @@ button:active{
         padding: 15px 30px;
         margin: 30px;
         border-radius: 50px;
+    }
+
+    #message{
+        font-size: 15px;
+        text-align: center;
     }
 
 }
